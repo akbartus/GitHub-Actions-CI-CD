@@ -1,0 +1,12 @@
+name: Scheduled Workflow 
+
+on:
+  schedule:
+    - cron: '*/2 * * * *'
+
+jobs:
+  hellow_world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo current time
+        run: echo "The vurrent server time is ${date}"
