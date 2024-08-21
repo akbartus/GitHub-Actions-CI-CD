@@ -1,0 +1,15 @@
+name: Expressions
+on:
+  push:
+    branches:
+      - main
+    
+job: 
+  expressions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Check if string contains substring"
+        if: contains("This is my sample text", 'text')
+        run: echo "This string contains substring"
+      - name: "Format and echo string"
+        run: echo ${{ format('Hello {0} {1} {2}', 'my', 'friend', 'Tom')}} 
