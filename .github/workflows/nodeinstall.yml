@@ -1,0 +1,24 @@
+name: Node.js Hello World
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16' # Specify the Node.js version you want to use
+
+      - name: Install dependencies
+        run: npm install
+      # write console.log into hello.js with >
+      - name: Run Hello World
+        run: |
+          echo "console.log('Hello World');" > hello.js 
+          node hello.js
