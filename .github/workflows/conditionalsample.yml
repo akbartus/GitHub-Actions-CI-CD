@@ -1,0 +1,14 @@
+name: Conditional Sample
+on: [push]
+jobs: 
+  do-something:
+    if: github.repository == 'akbartus/github-actions-test'
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Hello World"
+        run: echo "Hello World!"
+  do-another-thing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Hello Second Time"
+        run: echo "Hello second time!"
