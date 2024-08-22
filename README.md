@@ -1,6 +1,6 @@
 # GitHub Actions and CI/CD
 
-This repository provides information the basics of GitHub Actions as well as CI/CD pipeline.
+This repository provides information on the basics of GitHub Actions as well as CI/CD pipeline.
 
 The Demo workflows used can be found under ".github/workflows" folder.  
 
