@@ -2,6 +2,8 @@
 
 This repository provides information the basics of GitHub Actions as well as CI/CD pipeline.
 
+The Demo workflows used can be found under ".github/workflows" folder.  
+
 ## GitHub Actions
 ### Definitions
 CI/CD - Continuous Integration and Continuous Delivery
