@@ -1,17 +1,17 @@
 name: Run Bash Script
 on: [push]
-
-jobs:
-  example-job:
+jobs: 
+  example-job: 
     runs-on: ubuntu-latest
+    # this means base directory
+    defaults:
+      run: 
+        # use scripts directory in the root folder
+        working-directory: ./scripts
     steps:
-      - name: Check out the repository
+      - name: Check out the repository runner
         uses: actions/checkout@v4
-
-      - name: Run the first script
-        working-directory: ./scripts
+      - name: Run as script
         run: ./my-script.sh
-
-      - name: Run the second script
-        working-directory: ./scripts
+      - name: Run antother script
         run: ./my-another-script.sh
