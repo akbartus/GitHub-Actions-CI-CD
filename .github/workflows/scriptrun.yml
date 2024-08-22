@@ -11,7 +11,12 @@ jobs:
     steps:
       - name: Check out the repository runner
         uses: actions/checkout@v4
+
+      - name: Make scripts executable
+        run: chmod +x ./scripts/my-script.sh ./scripts/my-another-script.s
+          
       - name: Run as script
         run: ./my-script.sh
+
       - name: Run antother script
         run: ./my-another-script.sh
