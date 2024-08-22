@@ -11,3 +11,10 @@ jobs:
           echo "Msg 1"
           echo "Msg 2"
           echo "::endgroup::"
+      - name: Step 1
+        run: |
+          echo "MY_VAL = hello" >> $GITGHUB_ENV
+      - name: Step 2
+        run: |
+          echo $MY_VAL
+          
